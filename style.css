@@ -1,0 +1,93 @@
+html {
+  background-color: #0E1F2F;
+  }
+
+  #head {
+  background: #0E1F2F
+  text-align: center;
+  }
+
+  /* navigation menu */
+  .navbar {
+    width: 100%;
+    background-color: #0E1F2F;
+    overflow: hidden;
+  }
+
+  /* Navigation links */
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: #F5BC00;
+    text-decoration: none;
+    font-size: 17px;
+    width: 21%;
+    text-align: center;
+  }
+
+  /* Add a background color on hover */
+  .navbar a:hover {
+    background-color: #818479;
+  }
+
+  /* Style the current link */
+  .navbar a.active {
+    background-color: black;
+  }
+
+  /* Add responsiveness - mobile*/
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left; /* If you want the text to be left-aligned on small screens */
+    }
+  }
+
+  /*From here starts Home page styling with base name */
+
+  header {
+    color: #F5BC00;
+    font-size: 70px;
+    text-align: center;
+    font-family: Chakra Petch;
+  }
+
+  h1 {
+    color: #F5BC00;
+    font-size: 40px;
+    text-align: center;
+    font-family: Chakra Petch;
+  }
+
+  p {
+    color: #F5BC00;
+    font-size: 35px;
+    text-align: center;
+    font-family: Chakra Petch;
+  }
+
+  h2 {
+    color: #F5BC00;
+    font-size: 15px;
+    text-align: botton-left;
+    font-family: Chakra Petch;
+    margin: left;
+  }
+
+
+  /* 4 jets image */
+  .blue angels {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  body {
+    background-color: #0E1F2F;
+    color: #F5BC00;
+    padding: 25px;
+    font-family: Chakra Petch;
+  }
