@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
+import html from "html-literal";
 
-
-<div class="navbar">
-  <a class="active" href="#">Home</a>
-  <a href="#visitors">Visitors</a>
-  <a href="#contractors">Contractors</a>
-  <a href="#events">Events</a>
-</div>
-
-
-
-
-<img src="https://www.pexels.com/photo/four-jet-plane-on-sky-733254/"
+export default () => html`
+<section id="Home">
+<img src="C:\Users\donye\OneDrive\Pictures\Saved Pictures\four jets-capstone.jpg" alt="Blue Angels">
     <meta charset="UTF-8" />
     <title>Naval Air Station Oceana</title>
 
@@ -39,19 +28,6 @@
     From64, take 264 East to First Colonial Road, Exit 21A, Proceed on First Colonial Road past Virginia Beach Blvd. First Colonial becomes Oceana Blvd for the next 4 miles. Tomcat Blvd will be on the right , which leads to the main gate. The Visitor Control Center is the first building on the right, in building 252.
   </h2>
 
-
-//image for map //
-
-
-<footer>
-
-</footer>
+  <img src="C:\Users\donye\OneDrive\Pictures\Screenshots\Oceana Map from highway-googlemaps.png" alt="Google map image">
 
 
-
-
-  </body>
-
-  </main>
-
-</html>
