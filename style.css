@@ -1,3 +1,6 @@
+/* map image
+
+
 html {
   background-color: #0E1F2F;
   }
@@ -20,17 +23,18 @@ html {
     padding: 12px;
     color: #F5BC00;
     text-decoration: none;
-    font-size: 17px;
-    width: 21%;
+    font-size: 75px;
+    width: 23%;
     text-align: center;
+
   }
 
-  /* Add a background color on hover */
+  /* Add a background on hover */
   .navbar a:hover {
     background-color: #818479;
   }
 
-  /* Style the current link */
+  /* Style current link */
   .navbar a.active {
     background-color: black;
   }
@@ -41,7 +45,7 @@ html {
       float: none;
       display: block;
       width: 100%;
-      text-align: left; /* If you want the text to be left-aligned on small screens */
+      text-align: left; /* will be left-aligned on small screens */
     }
   }
 
@@ -78,12 +82,17 @@ html {
 
 
   /* 4 jets image */
-  .blue angels {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
+
+.Blue Angels {
+  background-image: url('https://images.pexels.com/photos/3758435/pexels-photo-3758435.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: auto 6px;
+}
+
+
+
 
   body {
     background-color: #0E1F2F;
