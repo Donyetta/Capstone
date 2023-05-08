@@ -30,4 +30,4 @@ export default () => html`
 
   <img src="C:\Users\donye\OneDrive\Pictures\Screenshots\Oceana Map from highway-googlemaps.png" alt="Google map image">
 
-
+`;

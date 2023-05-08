@@ -1,4 +1,5 @@
-export default st => `
+export default state => `
 <header>
-  <h1>${st.header}</h1>
-</header>`;
+  <h1>${state.header}</h1>
+</header>
+`;
