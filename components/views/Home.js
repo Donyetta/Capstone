@@ -14,14 +14,12 @@ export default () => html`
 
 
   </head>
-
-
 <main>
 
-  <body class="naso" id="specificeID">
+ <body class="naso" id="specificeID">
     <header>Naval Air Station Oceana Visitor Control Center</header>
     <h1>Contact Info:</h1>
-    <p>1450 Tomcat Blvd <br> Bldg 252 <br> Virginia Beach, VA <br> (757)-433-3212</p>
+    <p>1450 Tomcat Blvd <br> Bldg 252 <br> Virginia Beach, VA <br> (757)-433-3212 </p>
 
   <h2>
     Directions From Interstate 64 East or West: <br>
