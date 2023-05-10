@@ -3,5 +3,5 @@ import * as views from "./views";
 
 export default state =>
   html`
-    ${views[state.views](state)}
+    ${views[state.view](state)}
   `;
