@@ -38,7 +38,7 @@ router.hooks({
         axios
           // Get request to retrieve the current weather data using the API key and providing a city name
           .get(
-            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis`
+            `https://api.openweathermap.org/data/2.5/weather?zip=23460,us&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
           )
           .then(response => {
             console.log(response.data);
