@@ -11,7 +11,7 @@ export default () => html`
 
     <p>
       THE EVENT INFORMATION SHOULD BE SUBMITTED IN MEMO FORMAT TO
-      NASO.PASSOFFICE@NAVY.MIL
+      cni_nas_oceana_pass_office@us.navy.mil
     </p>
     <p>
       INDIVIDUALS 18 AND UP THAT WILL BE IN ATTENDANCE WILL NEED THEIR NAMES AND

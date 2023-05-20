@@ -5,7 +5,7 @@ export default state => html`
     <header>VISITORS</header>
     <h1>THINGS TO KNOW:</h1>
     <p>
-      SECNAV 5512/1 forms (that are up to date) sre required for all visitors
+      SECNAV 5512/1 forms (that are up to date) are required for all visitors
       needing access to the installation for background check purposes. <br />
       Any identification used for the Visitor Pass cannot be expired. <br />
       VHIC (Veterans Health Idfentification Cards) casn be registered for access
