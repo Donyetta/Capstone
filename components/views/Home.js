@@ -3,7 +3,7 @@ import myImage from "/assets/images/pexels-photo-3758435.jpeg";
 
 export default state => html`
   <section id="Home">
-    <img src="${myImage}" style="width:1450px;height:600px" />
+    <img src="${myImage}" style="width:1900px;height:700px" />
     <header>Naval Air Station Oceana Visitor Control Center</header>
     <h1>Contact Info:</h1>
     <p>

@@ -1,8 +1,4 @@
 /* map image */
-mapquest {
-  position: fixed;
-}
-
 
 
 html {
@@ -23,7 +19,8 @@ html {
 
   li {
     list-style-type: none;
-    float:left;
+    flex-direction: row;
+    float: left;
     text-align: center;
     padding: 20px;
 
@@ -103,11 +100,15 @@ html {
   /* 4 jets image */
 
   myImage {
+  image-orientation: none;
+  height:auto;
+  width:auto;
+  position: fixed;
   background-image:("assets\images\pexels-photo-3758435.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  padding: 25px
+  border: 3px solid #818479;
 }
 
 
@@ -115,7 +116,7 @@ html {
   body {
     background-color: #0E1F2F;
     color: #F5BC00;
-    padding: 25px;
+    padding: -5px;
     font-family: Chakra Petch;
     list-style: none outside none;
   }
