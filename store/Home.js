@@ -1,5 +1,6 @@
 export default {
   header: "",
   view: "Home",
-  weather: {}
+  weather: {},
+  mapquest: {}
 };
