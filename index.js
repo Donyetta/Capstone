@@ -65,10 +65,28 @@ router.hooks({
             console.log(err);
             done();
           });
-        axios.get();
-
+        axios
+          .get(
+            `https://www.mapquestapi.com/staticmap/v5/map?key=${process.env.MAP_QUEST_API}&center=Boston,MA&size=600,400@2x`
+          )
+          .then(response => {
+            // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
+            // Create an object to be stored in the Home state from the response
+            store.Contact.map = {};
+            // An alternate method would be to store the values independently
+            /*
+    store.Home.weather.city = response.data.name;
+    store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
+    store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
+    store.Home.weather.description = response.data.weather[0].main;
+    */
+            done();
+          })
+          .catch(err => {
+            console.log(err);
+            done();
+          });
         break;
-
       default:
         done();
     }
