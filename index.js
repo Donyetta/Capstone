@@ -24,13 +24,12 @@ function afterRender(state) {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
 }
-
 router.hooks({
   before: (done, params) => {
     const view =
       params && params.data && params.data.view
         ? capitalize(params.data.view)
-        : "Home";
+        : "Home"; //happend before the page is loaded
     // Add a switch case statement to handle multiple routes
     switch (view) {
       // New Case for the Home View
@@ -38,10 +37,9 @@ router.hooks({
         axios
           // Get request to retrieve the current weather data using the API key and providing a city name
           .get(
-            `https://api.openweathermap.org/data/2.5/weather?zip=23460,us&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
+            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis`
           )
           .then(response => {
-            console.log(response.data);
             // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
             const kelvinToFahrenheit = kelvinTemp =>
               Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
@@ -56,23 +54,26 @@ router.hooks({
 
             // An alternate method would be to store the values independently
             /*
-      store.Home.weather.city = response.data.name;
-      store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
-      store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
-      store.Home.weather.description = response.data.weather[0].main;
-      */
+            store.Home.weather.city = response.data.name;
+            store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
+            store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
+            store.Home.weather.description = response.data.weather[0].main;
+            */
             done();
           })
           .catch(err => {
             console.log(err);
             done();
           });
+        axios.get();
+
         break;
 
       default:
         done();
     }
   },
+
   already: params => {
     const view =
       params && params.data && params.data.view
