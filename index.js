@@ -28,11 +28,22 @@ window.onload = function() {
   L.mapquest.key = process.env.MAPQUEST_API_KEY;
 
   var map = L.mapquest.map("map", {
-    center: [37.7749, -122.4194],
+    center: [36.80349, -76.009934],
     layers: L.mapquest.tileLayer("map"),
-    zoom: 12
+    zoom: 18
   });
+  //map marker below this line
 
+  L.marker([36.80349, -76.009934], {
+    icon: L.mapquest.icons.marker({
+      primaryColor: "#0E1F2F",
+      secondaryColor: "#F5BC00",
+      shadow: true,
+      size: "md"
+      // symbol: 'T'
+    })
+  }).addTo(map);
+  //map marker above this line
   map.addControl(L.mapquest.control());
 };
 
@@ -49,7 +60,7 @@ router.hooks({
         axios
           // Get request to retrieve the current weather data using the API key and providing a city name
           .get(
-            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis`
+            `https://api.openweathermap.org/data/2.5/weather?zip=23460,us&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
           )
           .then(response => {
             // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
