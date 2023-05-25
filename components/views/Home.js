@@ -13,7 +13,7 @@ export default state => html`
       (757)-433-3212 <br />
       Hours: Mon-Thurs 0600-1700 Fri 0600-1600
     </p>
-    <p>${store.mapquest}</p>
+    <div id="map"></div>
     <h2>
       Directions From Interstate 64 East or West: <br />
       From64, take 264 East to First Colonial Road, Exit 21A, Proceed on First
