@@ -24,12 +24,24 @@ function afterRender(state) {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
 }
+window.onload = function() {
+  L.mapquest.key = process.env.MAPQUEST_API_KEY;
+
+  var map = L.mapquest.map("map", {
+    center: [37.7749, -122.4194],
+    layers: L.mapquest.tileLayer("map"),
+    zoom: 12
+  });
+
+  map.addControl(L.mapquest.control());
+};
+
 router.hooks({
   before: (done, params) => {
     const view =
       params && params.data && params.data.view
         ? capitalize(params.data.view)
-        : "Home"; //happend before the page is loaded
+        : "Home"; //happened before the page is loaded
     // Add a switch case statement to handle multiple routes
     switch (view) {
       // New Case for the Home View
@@ -65,10 +77,29 @@ router.hooks({
             console.log(err);
             done();
           });
-        axios.get();
-
+        axios
+          .get(
+            `https://www.mapquestapi.com/staticmap/v5/map?key=${process.env.MAPQUEST_API_KEY}&center=Boston,MA&size=600,400@2x`
+          )
+          .then(response => {
+            // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
+            // Create an object to be stored in the Home state from the response
+            // console.log(response.data);
+            store.Home.mapquest = {};
+            // An alternate method would be to store the values independently
+            /*
+    store.Home.weather.city = response.data.name;
+    store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
+    store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
+    store.Home.weather.description = response.data.weather[0].main;
+    */
+            done();
+          })
+          .catch(err => {
+            console.log(err);
+            done();
+          });
         break;
-
       default:
         done();
     }

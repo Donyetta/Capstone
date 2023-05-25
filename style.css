@@ -46,7 +46,9 @@ html {
   nav a.active {
     background-color: black;
   }
-
+#map {
+  height: 600px;
+}
   /* Add responsiveness - mobile*/
   @media screen and (max-width: 500px) {
     nav a {
