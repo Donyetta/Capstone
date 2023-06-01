@@ -23,6 +23,27 @@ function afterRender(state) {
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
+  if (state.view === "Home") {
+    document.querySelector("form").addEventListener("submit", () => {
+      event.preventDefault();
+      const Home = event.target.elements;
+      console.log("Home", Home);
+      const requestData = {
+        customer: Home.customer.value,
+        input: Home.input.value
+      };
+      console.log("request body", requestData);
+      axios
+        // Get request to retrieve the current weather data using the API key and providing a city name
+        .post(`${process.env.API_URL}/Home`, requestData)
+        .then(response => {
+          router.navigate("/home");
+        })
+        .catch(error => {
+          console.log("it puked", error);
+        });
+    });
+  }
 }
 window.onload = function() {
   L.mapquest.key = process.env.MAPQUEST_API_KEY;
@@ -77,11 +98,11 @@ router.hooks({
 
             // An alternate method would be to store the values independently
             /*
-            store.Home.weather.city = response.data.name;
-            store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
-            store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
-            store.Home.weather.description = response.data.weather[0].main;
-            */
+                  store.Home.weather.city = response.data.name;
+                  store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
+                  store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
+                  store.Home.weather.description = response.data.weather[0].main;
+                  */
             done();
           })
           .catch(err => {
@@ -99,11 +120,11 @@ router.hooks({
             store.Home.mapquest = {};
             // An alternate method would be to store the values independently
             /*
-    store.Home.weather.city = response.data.name;
-    store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
-    store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
-    store.Home.weather.description = response.data.weather[0].main;
-    */
+          store.Home.weather.city = response.data.name;
+          store.Home.weather.temp = kelvinToFahrenheit(response.data.main.temp);
+          store.Home.weather.feelsLike = kelvinToFahrenheit(response.data.main.feels_like);
+          store.Home.weather.description = response.data.weather[0].main;
+          */
             done();
           })
           .catch(err => {

@@ -22,7 +22,32 @@ export default state => html`
       the main gate. The Visitor Control Center is the first building on the
       right, in building 252.
     </h2>
-
+    <section id="ContactUs">
+      <form id="contactform" method="POST" action="">
+        <h2>Send us a Message!</h2>
+        <div>
+          <label for="subject">Subject:</label>
+          <input
+            type="text"
+            name="customer"
+            id="customer"
+            placeholder="Enter Subject"
+            required
+          />
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <input
+            type="text"
+            name="input"
+            id="input"
+            placeholder="Enter message"
+            required
+          />
+        </div>
+        <input type="submit" name="submit" value="Submit Message" />
+      </form>
+    </section>
     <h3>
       The weather in ${state.weather.city} is ${state.weather.description}.
       Temperature is ${state.weather.temp}F, and it feels like
