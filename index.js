@@ -35,7 +35,7 @@ function afterRender(state) {
       console.log("request body", requestData);
       axios
         // Get request to retrieve the current weather data using the API key and providing a city name
-        .post(`https://dbcapstone.onrender.com/home`, requestData)
+        .post(`${process.env.RENDER}`, requestData)
         .then(response => {
           router.navigate("/home");
         })
