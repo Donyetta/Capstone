@@ -14,5 +14,12 @@ router.post("/", (request, response) => {
     response.json(record);
   });
 });
+router.get("/", (request, response) => {
+  Home.find({}, (error, record) => {
+    if (error) return response.status(500).json(error.errors);
+
+    response.json(record);
+  });
+});
 
 module.exports = router;
