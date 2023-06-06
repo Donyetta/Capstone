@@ -8,7 +8,7 @@ export default state => html`
       SECNAV 5512/1 forms (that are up to date) are required for all visitors
       needing access to the installation for background check purposes. <br />
       Any identification used for the Visitor Pass cannot be expired. <br />
-      VHIC (Veterans Health Idfentification Cards) casn be registered for access
+      VHIC (Veterans Health Identification Cards) can be registered for access
       to Oceana /Dam Neck for up to a year at a time between the hours of
       0800-2200/7 days a week.
     </p>
@@ -31,7 +31,7 @@ export default state => html`
       You sponsor in-person for up to 30 days. <br />
       For work purposes if access is needed for more than 30 days, a sponsor
       verification spreadsheet will need to be completed. <br />
-      For personal conveyance lomger than 30 days you can submit an Agent Letter
+      For personal conveyance longer than 30 days you can submit an Agent Letter
       Packet to Legal through our office. Legal's phone number is
       (757)433-2248/2249.
     </p>

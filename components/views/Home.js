@@ -16,7 +16,7 @@ export default state => html`
     <div id="map"></div>
     <h2>
       Directions From Interstate 64 East or West: <br />
-      From64, take 264 East to First Colonial Road, Exit 21A, Proceed on First
+      From 64, take 264 East to First Colonial Road, Exit 21A, Proceed on First
       Colonial Road past Virginia Beach Blvd. First Colonial becomes Oceana Blvd
       for the next 4 miles. Tomcat Blvd will be on the right , which leads to
       the main gate. The Visitor Control Center is the first building on the

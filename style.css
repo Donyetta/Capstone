@@ -1,5 +1,8 @@
 /* map image */
-
+#map {
+  height: 400px;
+  width: 600px;
+}
 
 html {
   background-color: #0E1F2F;
@@ -46,11 +49,6 @@ html {
   nav a.active {
     background-color: black;
   }
-#map {
-  height: 400px;
-  width: 600px;
-}
-
 
   /* Add responsiveness - mobile*/
   @media screen and (max-width: 500px) {
@@ -108,7 +106,6 @@ html {
   image-orientation: none;
   height:auto;
   width:auto;
-  position: fixed;
   background-image:("assets\images\pexels-photo-3758435.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
