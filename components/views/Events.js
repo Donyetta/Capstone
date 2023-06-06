@@ -1,7 +1,7 @@
 import html from "html-literal";
 
 export default () => html`
-  <section id="events">
+  <section id="">
     <header>EVENTS</header>
     <h1>
       ALL EVENTS (COMMAND SPONSORED OR PRIVATE) MUST BE SUBMITTED TO THE VISITOR
