@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { Header, Nav, Main, Footer } from "./components";
 import * as store from "./store";
 import Navigo from "navigo";
@@ -28,6 +29,10 @@ function afterRender(state) {
       event.preventDefault();
       const Home = event.target.elements;
       console.log("Home", Home);
+      if (state.view === "Events") {
+        router.navigate("/Links");
+      }
+
       const requestData = {
         customer: Home.customer.value,
         input: Home.input.value
@@ -36,6 +41,7 @@ function afterRender(state) {
       axios
         // Get request to retrieve the current weather data using the API key and providing a city name
         .post(`${process.env.API_URL}/Home`, requestData)
+        // eslint-disable-next-line no-unused-vars
         .then(response => {
           router.navigate("/home");
         })
@@ -45,7 +51,7 @@ function afterRender(state) {
     });
   }
 }
-window.onload = function() {
+window.addEventListener("DOMContentLoaded", function() {
   L.mapquest.key = process.env.MAPQUEST_API_KEY;
 
   var map = L.mapquest.map("map", {
@@ -54,7 +60,6 @@ window.onload = function() {
     zoom: 18
   });
   //map marker below this line
-
   L.marker([36.80349, -76.009934], {
     icon: L.mapquest.icons.marker({
       primaryColor: "#0E1F2F",
@@ -66,7 +71,7 @@ window.onload = function() {
   }).addTo(map);
   //map marker above this line
   map.addControl(L.mapquest.control());
-};
+});
 
 router.hooks({
   before: (done, params) => {
@@ -113,6 +118,7 @@ router.hooks({
           .get(
             `https://www.mapquestapi.com/staticmap/v5/map?key=${process.env.MAPQUEST_API_KEY}&center=Boston,MA&size=600,400@2x`
           )
+          // eslint-disable-next-line no-unused-vars
           .then(response => {
             // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
             // Create an object to be stored in the Home state from the response
